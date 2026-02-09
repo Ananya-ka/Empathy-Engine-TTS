@@ -1,0 +1,4 @@
+pyttsx3
+nltk
+fastapi, uvicorn, jinja2, python, elevenlabs
+

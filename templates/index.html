@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empathy Engine</title>
+</head>
+<body>
+    <h1>Empathy Engine</h1>
+
+    <form action="/speak" method="post">
+        <textarea name="text" rows="4" cols="60"
+            placeholder="Enter text here..."></textarea>
+        <br><br>
+        <button type="submit">Generate Speech</button>
+    </form>
+
+    {% if emotion %}
+        <hr>
+        <p><b>Detected Emotion:</b> {{ emotion }}</p>
+        <p><b>Intensity:</b> {{ intensity }}</p>
+
+        <audio controls>
+            <source src="/static/audio/{{ audio_file }}" type="audio/mpeg">
+        </audio>
+    {% endif %}
+</body>
+</html>
